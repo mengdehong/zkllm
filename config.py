@@ -1,0 +1,1 @@
+model_card = "/home/wenmou/code/zkllm-ccs2024/model-storage/Llama-2-7b-hf"

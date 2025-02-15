@@ -21,7 +21,7 @@ if __name__ == '__main__':
         print("Error compiling commit-param")
         exit(1)
     args = parser.parse_args()
-    model_card = f"meta-llama/Llama-2-{args.model_size}b-hf"
+    model_card = f"/home/wenmou/code/zkllm-ccs2024/model-storage/Llama-2-7b-hf"
     scaling_factor = 1 << args.log_scaling_factor
     tokenizer = AutoTokenizer.from_pretrained(model_card, local_files_only = True, cache_dir = "./model-storage")
     model = AutoModelForCausalLM.from_pretrained(model_card, local_files_only = True, cache_dir = "./model-storage")

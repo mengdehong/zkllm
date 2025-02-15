@@ -6,7 +6,10 @@ INCLUDES := -I$(CONDA_PREFIX)/include
 LIBS := -L$(CONDA_PREFIX)/lib
 
 # get compute capability from retrieved value
-ARCH := sm_86
+#ARCH := sm_86
+
+# mdh  2070
+ARCH := sm_75  
 
 # NVCC compiler flags
 NVCC_FLAGS := -arch=$(ARCH) -std=c++17

@@ -21,7 +21,7 @@ if __name__ == '__main__':
         print("Error compiling rmsnorm")
         exit(1)
     args = parser.parse_args()
-    model_card = f"meta-llama/Llama-2-{args.model_size}b-hf"
+    model_card = f"/home/wenmou/code/zkllm-ccs2024/model-storage/Llama-2-7b-hf"
 
     model = AutoModelForCausalLM.from_pretrained(model_card, local_files_only = True, cache_dir = "./model-storage")
     layer = getattr(model.model.layers[0], f'{args.which}_layernorm')
